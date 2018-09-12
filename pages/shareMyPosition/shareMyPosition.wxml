@@ -1,0 +1,25 @@
+<view class="page-body">
+  <form bindsubmit="formSubmit">
+    <view class="page-section">
+      <view class="page-section-title">随便说两句吧...</view>
+      <view class="textarea-wrp">
+        <textarea name="message" auto-focus="true" maxlength="40" style="height: 3em" value="{{message}}" />
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="page-section-title">持续时长(分)</view>
+      <view class="textarea-wrp">
+        <slider activeColor='#4b98e4' name="minutes" min='5' value='15' max='120' step='5' show-value block-size='22'></slider>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="page-section-title">暗号</view>
+      <view class="textarea-wrp">
+        <input name="code" maxlength="15" placeholder='确认过眼神，你是懂暗号的人。'></input> 
+      </view>
+    </view>
+    <view class="btn-area">
+      <button class='button' formType="submit">广播我的位置</button>
+    </view>
+  </form>
+</view>

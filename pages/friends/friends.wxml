@@ -1,0 +1,70 @@
+<!--pages/friends/friends.wxml-->
+<view class='page_row'>
+  <view class="search">
+    <view class="df search_arr">
+      <icon class="searchcion" size='20' type='search'></icon>
+      <input placeholder="查找小伙伴" value="{{searchValue}}" bindconfirm="bindsearch" confirm-type="search" />
+    </view>
+  </view>
+</view>
+<view class="swiper-tab">
+  <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">关注</view>
+  <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">粉丝</view>
+  <view class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">密友</view>
+</view>
+<swiper current="{{currentTab}}" class="swiper" duration="300" style="height:87vh" bindchange="bindChange">
+  <swiper-item>
+    <view class='container-list'>
+      <scroll-view class="container-list" scroll-y="true">
+        <block wx:for="{{attentionList}}" wx:key="">
+          <view class="item-content" bindlongpress="openActionsheetSh" bindtap='showFriend' data-item="{{item}}">
+            <image class="item-content-img" src="../../images/132.jpg"></image>
+            <view class="item-content-info">
+              <view class="item-content-info-row">
+                <view class="item-content-info-name">{{item.nikname}}</view>
+                <view class="item-content-info-time {{item.time == '现在' ? 'time-now' : ''}}">{{item.time}}</view>
+              </view>
+              <view class="item-content-info-distance">{{item.distance}}</view>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class='container-list'>
+      <scroll-view class="container-list" scroll-y="true">
+        <block wx:for="{{fanList}}" wx:key="">
+          <view class="item-content" bindlongpress="openActionsheetSh" bindtap='showFriend' data-item="{{item}}">
+            <image class="item-content-img" src="../../images/132.jpg"></image>
+            <view class="item-content-info">
+              <view class="item-content-info-row">
+                <view class="item-content-info-name">{{item.nikname}}</view>
+                <view class="item-content-info-fan {{item.fanType == 1 ? 'info-fan-guzhu' : ''}}" catchtap='openActionsheetSh' data-item="{{item}}">{{item.fanType == 1 ? '已关注' : '未关注'}}</view>
+              </view>
+              <view class="item-content-info-distance">{{item.fanType == 1 ? item.distance : ''}}</view>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class='container-list'>
+      <scroll-view class="container-list" scroll-y="true">
+        <block wx:for="{{closeFriendList}}" wx:key="">
+          <view class="item-content" bindlongpress="openActionsheet" bindtap='showFriend' data-item="{{item}}">
+            <image class="item-content-img" src="../../images/132.jpg"></image>
+            <view class="item-content-info">
+              <view class="item-content-info-row">
+                <view class="item-content-info-name">{{item.nikname}}</view>
+                <view class="item-content-info-time {{item.time == '现在' ? 'time-now' : ''}}">{{item.time}}</view>
+              </view>
+              <view class="item-content-info-distance">{{item.distance}}</view>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </swiper-item>
+</swiper>

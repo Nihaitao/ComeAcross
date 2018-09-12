@@ -1,0 +1,23 @@
+/* pages/welcome/welcome.wxss */
+.welcome{
+  font-size: 68rpx;
+  color: #4b98e4; 
+  margin:80rpx auto;
+  width:20px;
+  line-height:100rpx;
+}
+
+.button{
+  width: 50%;
+  
+}
+
+.main{  
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 0 60rpx 0;
+  box-sizing: border-box;
+}

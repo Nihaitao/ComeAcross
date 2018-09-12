@@ -1,0 +1,66 @@
+/**index.wxss**/
+.page-section-gap{
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+.controls {
+  position:absolute;
+  height: 60px;
+  width: 100%;
+  bottom:20px;  
+}
+.friends {
+  bottom:70px;  
+}
+.myself {
+  bottom:120px;  
+}
+.code{
+  top:0;
+}
+.topConver{ 
+  float: right;
+  background: #9d714a6c;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius:50%;
+  margin: -70rpx -70rpx;
+  box-shadow: #9d714a 0px 0px 5px;
+}
+.myPosition{
+  float: right;
+  width: 32px;
+  height: 32px;
+  border-radius:50px;
+  border:solid #ddd 1px;
+  margin: 10px 10px;
+  box-shadow: #666 0px 0px 10px;
+}
+.leftConver{ 
+  float: left;
+  background: white;
+  width: 68px;
+  height: 40px;
+  border-radius:50px;
+  border:solid #ddd 1px;
+  margin: 0px -16px;
+  box-shadow: #666 0px 0px 5px;
+}
+.img {
+  width: 32px;
+  height: 32px;
+}
+.img-right{
+  margin: 5px 0 0 25px;
+}
+
+.codecloseimg{
+  width: 32rpx;
+  height: 32rpx;
+  margin: 80rpx 30rpx;
+}
+.codeopenimg{
+  width: 32rpx;
+  height: 22rpx;
+  margin: 86rpx 30rpx;
+}

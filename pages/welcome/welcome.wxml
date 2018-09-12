@@ -1,0 +1,5 @@
+<!--pages/welcome/welcome.wxml-->
+<view class='main'>
+  <text class='welcome'>大写的欢迎 ！</text>
+  <button class='button' plain='true' open-type="getUserInfo" bindgetuserinfo='bindgetuserinfo'>点老子授权</button>
+</view>

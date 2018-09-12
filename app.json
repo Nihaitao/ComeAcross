@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/setting/setting",
+    "pages/welcome/welcome",
+    "pages/info/info",
+    "pages/friends/friends",
+    "pages/shareMyPosition/shareMyPosition",
+    "pages/search/list"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Come Across Me",
+    "navigationBarTextStyle": "black"
+  }
+}

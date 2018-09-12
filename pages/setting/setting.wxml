@@ -1,0 +1,52 @@
+<!--pages/setting/setting.wxml-->
+<view class="container">
+  <view class='message'>
+    <image class="message-image" src="../../images/message.png" bindtap='bindMessage'></image>
+  </view>
+  <view class="userinfo">
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class='delimiter'></view>
+  <view class="userinfo">
+    <view class="userinfo-detail" bindtap='detailtap' data-index="1">
+      <text class='userinfo-detail-number'>133</text>
+      <text class='userinfo-detail-text'>关注</text>
+    </view>
+    <view class="userinfo-detail" bindtap='detailtap' data-index="2">
+      <text class='userinfo-detail-number'>233</text>
+      <text class='userinfo-detail-text'>粉丝</text>
+    </view>
+    <view class="userinfo-detail" bindtap='detailtap' data-index="3">
+      <text class='userinfo-detail-number'>32</text>
+      <text class='userinfo-detail-text'>密友</text>
+    </view>
+    <view class="userinfo-detail" bindtap='detailtap' data-index="4">
+      <text class='userinfo-detail-number'>4</text>
+      <text class='userinfo-detail-text'>黑名单</text>
+    </view>
+  </view>
+  <view class='delimiter'></view>
+  <view class='totalamount'>
+    <text class='totalamount-name'>总资产</text>
+    <text class='totalamount-amount'>$200</text>
+  </view>
+  <view class="otherinfo">
+    <view class='otherlist'>
+      <text class='othertext'>卡券</text>
+      <text class='othertext-arrow'>〉</text>
+    </view>
+    <view class='otherlist'>
+      <text class='othertext'>偶遇</text>
+      <text class='othertext-arrow'>〉</text>
+    </view>
+    <view class='otherlist'>
+      <text class='othertext'>指南</text>
+      <text class='othertext-arrow'>〉</text>
+    </view>
+    <view class='otherlist'>
+      <text class='othertext'>设置</text>
+      <text class='othertext-arrow'>〉</text>
+    </view>
+  </view>
+</view>

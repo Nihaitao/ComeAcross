@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<loading hidden="{{hiddenLoading}}">loading</loading>
+<view class="page-body">
+  <view class="page-section page-section-gap">
+    <map id="myMap" style="width: 100%; height: 100vh;" markers="{{markers}}" scale="{{scale}}" bindmarkertap="markertap" show-location='true'>
+      <cover-view class="controls code">
+        <cover-view class="topConver" bindtap="code">
+          <cover-image class="{{codeType == 1 ? 'codeopenimg' : 'codecloseimg'}}" src="{{codeType == 1 ? '/images/codeopen.png' : '/images/codeclose.png'}}" />
+        </cover-view>
+      </cover-view>
+      <cover-view class="controls friends">
+        <cover-view class="leftConver" bindtap="friends">
+          <cover-image class="img img-right" src="/images/friends.png" />
+        </cover-view>
+      </cover-view>
+      <cover-view class="controls ">
+        <cover-view class="leftConver" bindtap="shareMyPosition">
+          <cover-image class="img img-right" src="/images/share.png" />
+        </cover-view>
+        <cover-view class="myPosition" bindtap="myPosition">
+          <cover-image class="img" src="/images/position.png" />
+        </cover-view>
+      </cover-view>
+      <cover-view class="controls myself">
+        <cover-view class="leftConver" bindtap="myself">
+          <cover-image class="img img-right" src="/images/myself.png" />
+        </cover-view>
+      </cover-view>
+    </map>
+  </view>
+</view>

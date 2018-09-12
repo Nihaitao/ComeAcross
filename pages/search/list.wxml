@@ -1,0 +1,25 @@
+<!--pages/search/list.wxml-->
+<view class='page_row'>
+  <view class="search">
+    <view class="df search_arr">
+      <icon class="searchcion" size='20' type='search'></icon>
+      <input placeholder="查找小伙伴" value="{{searchValue}}" bindconfirm="bindsearch" confirm-type="search" />
+    </view>
+  </view>
+</view>
+<view class='container-list'>
+  <scroll-view class="container-list" scroll-y="true">
+    <block wx:for="{{searchList}}" wx:key="">
+      <view class="item-content" bindlongpress="openActionsheetSh" bindtap='showFriend' data-item="{{item}}">
+        <image class="item-content-img" src="../../images/132.jpg"></image>
+        <view class="item-content-info">
+          <view class="item-content-info-row">
+            <view class="item-content-info-name">{{item.nikname}}</view>
+            <view class="item-content-info-time {{item.time == '现在' ? 'time-now' : ''}}">{{item.time}}</view>
+          </view>
+          <view class="item-content-info-distance">{{item.distance}}</view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

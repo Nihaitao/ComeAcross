@@ -1,0 +1,24 @@
+<!--pages/info/info.wxml-->
+<view class="container">
+  <view class='moreinfo'>
+    <label class='moreinfo-label' bindtap='openActionsheetSh'>…</label>
+  </view>
+  <view class="userinfo">
+    <image bindtap="bindViewTap" class="userinfo-avatar {{userInfo.sex == 1 ? 'userinfo-avatar-male' : 'userinfo-avatar-female'}}" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <view class='userinfo-info'>
+      <text class="userinfo-attention">关注 {{userInfo.attention}}</text>
+      <text class="userinfo-fans">粉丝 {{userInfo.fans}}</text>
+    </view>
+  </view>
+</view>
+<view class="page-section page-section-gap">
+  <map id="myMap" style="width: 100%; height: {{mapHeight}};" markers="{{userInfo.markers}}" latitude="{{userInfo.markers[0].latitude}}" longitude="{{userInfo.markers[0].longitude}}" ></map>
+</view>
+<view class='foot'>
+  <view class='foot-view'>
+    <view class='foot-view-left'><label class='foot-label'>☰</label>互相关注</view>
+    <view class='foot-view-middle'>|</view>
+    <view class='foot-view-right'><label class='foot-label'>☰</label>撩一下</view>
+  </view>
+</view>

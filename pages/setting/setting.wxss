@@ -1,0 +1,98 @@
+/* pages/setting/setting.wxss */
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx 20rpx 20rpx 20rpx;
+  box-sizing: border-box;
+  background-color:whitesmoke;
+}
+
+.message{
+  width: 100%;
+  height: 1rpx;
+}
+
+.message-image{
+  float: right;
+  width:28px;
+  height: 28px;
+}
+
+.userinfo{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color:black;
+  padding: 40rpx;
+}
+
+.delimiter{
+  width: 100%;
+  height: 1px;
+  background-color: white;
+}
+
+.userinfo-detail{
+  margin: 30rpx 0 10rpx 0;
+  flex:1;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100rpx;
+}
+
+.userinfo-detail-number{
+  font-size: 36rpx;
+}
+.userinfo-detail-text{
+  color: #888;
+  font-size: 28rpx;
+}
+
+.otherinfo{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.otherlist{
+  background-color: white;  
+  padding: 60rpx 20rpx 60rpx 20rpx;
+  margin: 20rpx 0 auto;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.othertext{
+  color: #333;
+  font-size: 32rpx;
+} 
+
+.othertext-arrow{
+  color: #888;
+  font-size: 28rpx;
+}
+
+.totalamount{
+  margin-top: 20rpx;
+  padding: 20rpx;
+}
+.totalamount-name{
+  padding: 20rpx;
+}
+.totalamount-amount{
+  padding: 20rpx;
+}
